@@ -1,9 +1,10 @@
 import './App.css';
+import Compendium from './views/compendium/Compendium.jsx';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header"></header>
+    <div className="App-header">
+      <Compendium />
     </div>
   );
 }
