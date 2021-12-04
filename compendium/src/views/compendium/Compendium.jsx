@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { fetchPokemonAPI } from '../../services/FetchPokemonAPI';
+import PokemonList from '../../components/PokemonList';
+import fetchPokemonAPI from '../../services/FetchPokemonAPI';
 
-export default function Compendium() {
+function Compendium() {
   const [loading, setLoading] = useState(true);
   const [pokemonState, setPokemonState] = useState([]);
 
@@ -19,5 +20,11 @@ export default function Compendium() {
     return <h1>Loading...</h1>;
   }
 
-  return <div></div>;
+  return (
+    <>
+      <PokemonList pokemonState={pokemonState} />
+    </>
+  );
 }
+
+export default Compendium;
