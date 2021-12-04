@@ -1,18 +1,18 @@
 // import PropTypes from 'prop-types';
 import Pokemon from './Pokemon';
 
-const PokemonList = ({ pokemonState }) => (
+const PokemonList = ({ pokemon }) => (
   <ul aria-label="pokemon">
-    {pokemonState.map((pokemon) => (
-      <li key={`${pokemon.name}`}>
+    {pokemon.map((poke) => (
+      <li key={poke.name}>
         <Pokemon
-          name={pokemon.name}
-          image={pokemon.image}
-          typeOne={pokemon.typeOne}
-          typeTwo={pokemon.typeTwo}
-          attack={pokemon.attack}
-          defense={pokemon.defense}
-          pokedex={pokemon.pokedex}
+          name={poke.name}
+          image={poke.image}
+          typeOne={poke.typeOne}
+          typeTwo={poke.typeTwo}
+          attack={poke.attack}
+          defense={poke.defense}
+          pokedex={poke.pokedex}
         />
       </li>
     ))}

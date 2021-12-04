@@ -10,10 +10,10 @@ const Pokemon = ({
   pokedex,
 }) => (
   <figure>
-    <h1>{name}</h1>
-    <img alt="" src={image} />
+    <h2>{name}</h2>
+    <img alt="" src={image} height="250" />
     <p>
-      Type(s): {typeOne} / {typeTwo}
+      Type: {typeOne} / {typeTwo}
     </p>
     <p>Attack: {attack}</p>
     <p>Defense: {defense}</p>

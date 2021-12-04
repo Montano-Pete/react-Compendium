@@ -14,4 +14,14 @@ const fetchPokemonAPI = async () => {
   }));
 };
 
-export default fetchPokemonAPI;
+const fetchPokemonApiTypes = async () => {
+  const res = await fetch(
+    'https://pokedex-alchemy.herokuapp.com/api/pokedex/types/'
+  );
+  const typesData = await res.json();
+  console.log('types', typesData);
+
+  return typesData.map((type) => type.type);
+};
+
+export { fetchPokemonAPI, fetchPokemonApiTypes };
