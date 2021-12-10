@@ -1,5 +1,5 @@
 // import PropTypes from 'prop-types';
-import Pokemon from './Pokemon';
+import Pokemon from '../pokemonDetails/Pokemon';
 
 const PokemonList = ({ pokemon }) => (
   <ul aria-label="pokemon">
